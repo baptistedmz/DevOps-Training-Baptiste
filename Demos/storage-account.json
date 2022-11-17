@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.12.40.16777",
+      "templateHash": "1990702566715541749"
+    }
+  },
+  "parameters": {
+    "storageAccountName": {
+      "type": "string"
+    },
+    "storageAccountSKU": {
+      "type": "string"
+    },
+    "deploymentLocation": {
+      "type": "string"
+    },
+    "storageAccountKind": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2021-09-01",
+      "name": "storageName",
+      "location": "uk south",
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2"
+    }
+  ]
+}
